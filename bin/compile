@@ -38,11 +38,6 @@ status "Copying configs"
 mkdir -p $build_dir/config
 cp $bp_dir/config/htpasswd.rb $build_dir/config
 cp $bp_dir/config/mime.types $build_dir/config
-if [[ ! -f $build_dir/config/nginx.conf.erb ]]; then
-  cp $bp_dir/config/nginx.conf.erb $build_dir/config
-else
-  status "Custom nginx config found"
-fi
 
 cd $build_dir
 
