@@ -38,6 +38,7 @@ status "Copying configs"
 mkdir -p $build_dir/config
 cp $bp_dir/config/htpasswd.rb $build_dir/config
 cp $bp_dir/config/mime.types $build_dir/config
+mv $build_dir/nginx.conf.erb $build_dir/config
 
 cd $build_dir
 
